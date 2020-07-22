@@ -1,0 +1,267 @@
+/* @font-face {
+    font-family: "futura";
+    src: url("/fonts/futura-heavy.ttf") format("ttf")
+} */
+    
+    /* mobile styling ------------------------------*/
+
+html, body {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    font-size: 1rem;
+}
+
+* {
+    font-family: "Overpass";
+    box-sizing: border-box;
+}
+
+/* global styles ---------------------------*/
+
+:root {
+    --primary-color:#007a8f;
+    --accent-color-1: #005463;
+    --accent-color-3: #00ac84;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    text-transform: capitalize;
+}
+
+ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+P{
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    transition: opacity .15s ease-in-out;
+    font-weight: 600;
+    color: var(--primary-color); 
+}
+
+a:hover {
+    opacity: .70;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    margin: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-width: 1440px;
+}
+
+.section {
+    margin-bottom: 90px;
+
+}
+
+/* Block Styles------------------------*/
+
+/* header section */
+.head {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+justify-content: space-between;
+}
+
+.head_logowrap {
+    width: 50%;
+}
+
+.head_logo {
+    min-width:120px;
+    max-width:200px;
+}
+/* navbar section */
+
+.navigate {
+    padding: 15px 0;
+     width: 50%;
+    background: white;
+    display: none;
+}
+
+.navlist {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navlist_items {
+padding: 0 10px;
+}
+
+.head_hamburger {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    position: relative;
+    left: 10%; */
+
+
+}
+
+.bar {
+    display: inline-block;
+    height: 5px;
+    margin-top: 10px;
+    margin-left: 5px;
+    background-color: purple;
+    /* background-color: linear-gradient(229.93deg, #AB00FF -21.91%, #007BFF 133.89%); */
+    border-radius: 5px;
+}
+
+.bar-1 {
+    width: 36px;
+}
+
+.bar-2 {
+    width: 28px;
+    position: relative;
+    left: 5px;
+}
+
+
+/* hero section */
+
+.hero {
+    background-image: url("/images/backgrounds/hero-bg-texture.png"); 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+.hero_head {
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+    display: flex;
+    justify-content:flex-start;
+}
+
+.section_card {
+    max-width: 700px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.25)
+}
+
+/* features */
+
+.feature_head {
+color: #007bff;
+    font-weight: bolder;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+}
+
+.features_row {
+    display: flex;
+    flex-direction: column;
+}
+
+.features_card {
+border: none;
+/* box-shadow: 1px 1px 10px rgba(0,0,0,0.25) */
+border-radius: 15px;
+margin: 30px 15px;
+align-items: center;
+display: flex;
+}
+
+.features_word {
+padding-right: 15px;
+}
+
+.features_image {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+.feature_pic{
+width: auto;
+ max-height: 100px;
+}
+/* services */
+
+.services_card {
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #AB00FF;
+}
+
+.nav-footer {
+    list-style: none;
+}
+
+.nav-footitems {
+ padding-bottom: 10px;
+ 
+}
+
+.nav_footlinks {
+    color: white;
+}
+
+/* Desktop styles --------------------------------------- */
+
+/* media section */
+
+
+@media (min-width: 900px) {
+    .navlist {
+        justify-content: flex-end;
+    }
+    .features_row {
+        flex-direction: row;
+    }
+    .about {
+        flex: 3;
+    }
+    .footer_nav { 
+        flex: 1;
+    }
+    .nav-footer {
+        text-align: right;
+    }
+    .head_hamburger {
+        display: none;
+    }
+    .navigate {
+        display: block;
+    }
+}
